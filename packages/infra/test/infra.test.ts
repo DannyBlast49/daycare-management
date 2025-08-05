@@ -5,7 +5,10 @@ import * as Infra from '../lib/infra-stack';
 // example test. To run these tests, uncomment this file along with the
 // example resource in lib/infra-stack.ts
 
-test('SQS Queue Created', () => {
+test('Simple passing test', () => {
+  expect(true).toBe(true);
+});
+// test('Resources deployed', () => {
 //   const app = new cdk.App();
 //     // WHEN
 //   const stack = new Infra.InfraStack(app, 'MyTestStack');
@@ -15,4 +18,4 @@ test('SQS Queue Created', () => {
 //   template.hasResourceProperties('AWS::SQS::Queue', {
 //     VisibilityTimeout: 300
 //   });
-});
+// });
