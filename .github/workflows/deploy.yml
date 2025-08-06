@@ -33,4 +33,4 @@ jobs:
         run: npm install
 
       - name: Deploy CDK
-        run: npx cdk deploy --app "node bin/daycare-management.js" --require-approval never
+        run: npx cdk deploy --app "node bin/infra.js" --require-approval never
