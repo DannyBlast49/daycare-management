@@ -32,5 +32,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Compile TypeScript
+        run: npm run build
+
       - name: Deploy CDK
         run: npx cdk deploy --app "node bin/infra.js" --require-approval never
