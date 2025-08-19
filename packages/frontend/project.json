@@ -1,0 +1,41 @@
+{
+  "name": "@daycare-management/frontend",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": ".",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "../../dist/packages/frontend"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "."
+        },
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nx/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "@daycare-management/frontend:build",
+        "dev": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "@daycare-management/frontend:build:development",
+          "dev": true
+        },
+        "production": {
+          "buildTarget": "@daycare-management/frontend:build:production",
+          "dev": false
+        }
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,19 @@
+{
+  "name": "@daycare-management/infra",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/infra",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/infra",
+        "main": "packages/infra/bin/infra.ts",
+        "tsConfig": "packages/infra/tsconfig.json",
+        "assets": ["packages/infra/*.md"]
+      }
+    }
+  },
+  "tags": []
+}

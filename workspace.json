@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "projects": {
+    "auth": "packages/auth",
+    "lambdas": "packages/lambdas",
+    "@daycare-management/frontend": "packages/frontend",
+    "@daycare-management/infra": "packages/infra"
+  }
+}
